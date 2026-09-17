@@ -14,7 +14,7 @@ A quota is a single bar glyph until it needs attention: past 70% it turns into a
 Linux with `jq`, `git` and `curl`. With `glab` installed and logged in, the MR segment appears.
 
 ```sh
-git clone git@github.com:txssu/claude-statusline.git
+git clone https://github.com/txssu/claude-statusline.git
 claude-statusline/install.sh
 ```
 
@@ -25,3 +25,7 @@ The installer symlinks `statusline.sh` to `~/.claude/statusline-command.sh` and 
 The Fable quota is not in the status-line JSON, so the script reads the OAuth token from `~/.claude/.credentials.json` and queries `api.anthropic.com/api/oauth/usage` at most once a minute, in the background. A reading older than ten minutes is prefixed with `~`.
 
 Cached readings live in `${XDG_CACHE_HOME:-~/.cache}/claude-statusline`.
+
+## License
+
+MIT
